@@ -8,5 +8,5 @@ Infos
 -------
 
 * jQuery muss ins Frontend eingebunden werden!
-* CSS Muss ins Frontend eingebunden werden (kann natürlich angepasst werden :-))
+* CSS  ins Frontend einbinden
 
