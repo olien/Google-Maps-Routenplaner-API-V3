@@ -52,9 +52,10 @@ else
 <?php if ($doroute){	?>
 		var directionDisplay<?php echo $mapidx; ?>;
 		var directionsService<?php echo $mapidx; ?> = new google.maps.DirectionsService();
-		function calcRoute<?php echo $mapidx; ?>(mapidx, zieladresse) {
+		function calcRoute<?php echo $mapidx; ?>(mapidx, zieladresse, lat, lng) {
+			var mylatlng = new google.maps.LatLng(lat,lng);
 			var start = document.getElementById('start'+mapidx).value;
-			var end = zieladresse;
+			var end = mylatlng;
 			var request = {
 				origin: start,
 				destination: end,
@@ -122,7 +123,7 @@ else
 
 <?php if ($doroute){	?>
 	<!-- Formular -->
-	<form id="routenplaner<?php echo $mapidx; ?>" class="routenplaner" action="javascript:void(0);" onsubmit="return calcRoute<?php echo $mapidx; ?>('<?php echo $mapidx; ?>', '<?php echo $zieladresse ?>')">
+	<form id="routenplaner<?php echo $mapidx; ?>" class="routenplaner" action="javascript:void(0);" onsubmit="return calcRoute<?php echo $mapidx; ?>('<?php echo $mapidx; ?>', '<?php echo $zieladresse ?>', '<?php echo $lat ?>', '<?php echo $lng ?>')">
 		<fieldset>
 		<?php if ($textLegend != '') {echo '<legend>'.$textLegend.'</legend>';} ?>
 			<input type="text" id="start<?php echo $mapidx; ?>" value="" />
