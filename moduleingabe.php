@@ -84,7 +84,6 @@
 </style>
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;region=DE"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
 <script type="text/javascript">
 //Useful links:
